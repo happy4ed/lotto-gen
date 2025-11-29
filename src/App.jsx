@@ -431,7 +431,10 @@ export default function App() {
       });
       await new Promise(resolve => setTimeout(resolve, 300)); // 다음 대기 (0.3초)
     }
-    setNumbers([]);
+    
+    // [수정] 마지막 회차 번호는 지우지 않고 화면에 유지함
+    // setNumbers([]);  <-- 이 부분을 삭제했습니다.
+    
     setIsFadingOut(false);
     setIsGenerating(false);
     setCurrentRound(0);
